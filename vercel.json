@@ -1,5 +1,13 @@
+Step 2: Set up vercel.json correctly
 {
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
+    "version":2,
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "/"
+        }
     ]
-}
+  }
